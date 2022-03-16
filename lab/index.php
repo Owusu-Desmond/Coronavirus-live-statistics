@@ -20,7 +20,7 @@
             // put result into associative array
             $row = $result->fetch_assoc();
             // check if password match email address
-            if ($password !== $row["Pass_word"]) {
+            if ($password !== $row["password"]) {
                 array_push($errors,"Incorrect password!");
             }
         }
@@ -29,7 +29,7 @@
         $errors_length = count($errors);
         if ($errors_length < 1) {
             // storing user information to be used in home page.
-            $db->storeUserInfo($row["Username"],$row["Email"]);
+            $db->storeUserInfo($row["username"],$row["email"]);
             header("location:templates/userPage.php");
         }
     }
