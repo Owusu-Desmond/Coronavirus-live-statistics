@@ -1,0 +1,9 @@
+/vendor/
+composer.lock
+.idea
+*.cache
+*.rbx
+/visualize
+/data/ai_model/**
+/data/csv/**
+/test/Unit/output/**

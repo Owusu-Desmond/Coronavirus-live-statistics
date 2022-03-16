@@ -1,0 +1,34 @@
+{
+  "name": "torian257x/ai-php-rubix-wrap",
+  "type": "library",
+  "description": "AI PHP is a wrapper for rubix ml",
+  "keywords": ["ml","rubix","php","ai"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lukas Meier",
+      "email": "torian257x@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "src/functions.php"
+    ],
+    "psr-4": {
+      "Torian257x\\RubWrap\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Torian257x\\RubWrap\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  },
+  "require": {
+    "php": ">=8.0",
+    "rubix/ml": "^1.0"
+  }
+}
