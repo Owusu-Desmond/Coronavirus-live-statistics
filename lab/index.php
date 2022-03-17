@@ -4,6 +4,7 @@
     include "libraries/Database.php";
     $db = new Database();
     $login = false;
+
     if (isset($_POST['login'])) {
         $email = $db->escapeString($_POST['email']);
         $password = $db->escapeString($_POST['pass']);

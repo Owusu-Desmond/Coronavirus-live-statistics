@@ -29,7 +29,7 @@
         }
 
         public function addOwidCovidData($data){
-            $this->dbconn = $this->dbconn->prepare("INSERT INTO owid-covid-data (
+            $this->stmt = $this->dbconn->prepare("INSERT INTO owid_covid_data (
                     iso_code,continent,location,date,total_cases,new_cases,new_cases_smoothed,total_deaths,new_deaths,new_deaths_smoothed,
                     total_cases_per_million,new_cases_per_million,new_cases_smoothed_per_million,total_deaths_per_million,new_deaths_per_million,
                     new_deaths_smoothed_per_million,reproduction_rate,icu_patients,icu_patients_per_million,hosp_patients,
@@ -44,7 +44,7 @@
                     excess_mortality_cumulative_absolute,excess_mortality_cumulative,excess_mortality,excess_mortality_cumulative_per_million
                     ) 
                     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-                $this->dbconn->bind_param("sssiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
+                $this->stmt->bind_param("sssdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
             $data['iso_code'],
             $data['continent'],
             $data['location'],
@@ -113,12 +113,12 @@
             $data['excess_mortality'],
             $data['excess_mortality_cumulative_per_million']
                      );
-                return $this->$dbconn->execute();
+                return $this->stmt->execute();
         }
 
-        public function getOwidCovidData(){
+        public function getTableData(){
             $this->stmt = $this->dbconn->query("SELECT * FROM owid_covid_data");
-            $this->stmt= $result->fetch_assoc();
+            $this->stmt= $this->stmt->fetch_assoc();
             return $this->stmt;
           }
 
@@ -135,6 +135,15 @@
             }
             
         }
+
+        // public function checkIfTableExit($tableName){
+        //     $this->stmt = "SELECT  1 from" . "$tableName";
+        //     if ($this->dbconn->query($this->stmt) === TRUE) {
+        //         return false;
+        //     }else{
+        //         return true;   
+        //     }
+        // }
 
         public function storeUserInfo($username,$email){
             $_SESSION['email'] = $email;

@@ -5,24 +5,48 @@
         <?php 
             $isUserPage = true;
             $pageTitle = "User Page";
-            include_once "../includes/header.php"; 
+            include_once "../includes/header.php";
+            include_once "../config/config.php";
+            include_once "../uploadData.php";
+            $cases = $_SESSION["cases"];
+            echo sizeof($cases);
         ?>
             <div class=" ps-5 container-fiuld fs-3 py-2 bg-dark">
                 <i class="bi bi-gear"></i>Welcome <?php echo strtok($_SESSION['username'], " ");?><a href="../index.php" class="btn me-4 btn-info  float-end">Logout<i class="bi bi-box-arrow-left"></i></a>
             </div>
             <!-- this is cases Info table-->
-            <div class="container mt-4">
+            <div class="container-fliud mt-4">
             <table id="casesInfoTable" class="table table-striped table-hover" style="width:100%">
                 <thead>
                 <tr class="table-primary">
-                    <th>Name</th>
-                    <th>Class</th>
-                    <th></th>
-                    <th></th>
+                    <th>col name</th>
+                    <th>col name</th>
+                    <th>col name</th>
+                    <th>col name</th>
+                    <th>col name</th>
+                    <th>col name</th>
+                    <th>col name</th>
+                    <th>col name</th>
+                    <th>col name</th>
+                    <th>col name</th>
+
                 </tr>
                 </thead>
                 <tbody>
-                
+                <?php foreach($cases as $case): ?>
+                    <tr>            
+                          <td><?php echo $case?>              
+                          <td><?php echo $case?>              
+                          <td><?php echo $case?>              
+                          <td><?php echo $case?>              
+                          <td><?php echo $case?>              
+                          <td><?php echo $case?>              
+                          <td><?php echo $case?>              
+                          <td><?php echo $case?>              
+                          <td><?php echo $case?>              
+                          <td><?php echo $case?>              
+                    </tr>
+                <?php endforeach;?>
                 </tbody>
             </table>
             </div>
