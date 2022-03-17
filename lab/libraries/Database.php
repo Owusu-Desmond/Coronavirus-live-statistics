@@ -118,7 +118,6 @@
 
         public function getTableData(){
             $this->stmt = $this->dbconn->query("SELECT * FROM owid_covid_data");
-            $this->stmt= $this->stmt->fetch_assoc();
             return $this->stmt;
           }
 
