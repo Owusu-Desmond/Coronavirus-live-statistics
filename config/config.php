@@ -1,0 +1,7 @@
+<?php
+define("DB_HOST","YOUR DATABASE HOSTNAME HERE");
+define("DB_USER","YOUR DATABASE USERNAME HERE");
+define("DB_PASS","YOUR DATABASE PASSWORD HERE");
+define("DB_NAME","YOUR DATABASE NAME HERE");
+define("TAGLINE","COVID Live - Coronavirus Statistics");
+?>

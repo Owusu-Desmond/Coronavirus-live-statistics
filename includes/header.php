@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand text-white fs-5" href="#">Login and Sign Up System</a>
+          <a class="navbar-brand text-white fs-5" href="#">COVID Live - Coronavirus Statistics</a>
         </div>
     </nav>
     <?php if(!$isUserPage){ ?>
