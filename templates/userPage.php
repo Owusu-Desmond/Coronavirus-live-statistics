@@ -102,10 +102,11 @@
                             foreach ($value as $row){
                     ?>
                     <tr>
-                        <td><?php echo $row['iso_code'] ?></td>
-                        <td><?php echo $row['continent'] ?></td> 
+                    <td>
+                        <?php echo $row['iso_code'] ?></td>
+                        <td><?php echo $row['continent'] ?></td>
                         <td><?php echo $row['location'] ?></td>
-                        <td><?php echo $row['date'] ?></td> 
+                        <td><?php echo $row['date'] ?></td>
                         <td><?php echo $row['total_cases'] ?></td>
                         <td><?php echo $row['new_cases'] ?></td>
                         <td><?php echo $row['new_cases_smoothed'] ?></td>
@@ -123,6 +124,7 @@
                         <td><?php echo $row['icu_patients_per_million'] ?></td>
                         <td><?php echo $row['hosp_patients'] ?></td>
                         <td><?php echo $row['hosp_patients_per_million'] ?></td>
+                        <td><?php echo $row['weekly_icu_admissions'] ?></td>
                         <td><?php echo $row['weekly_icu_admissions_per_million'] ?></td>
                         <td><?php echo $row['weekly_hosp_admissions'] ?></td>
                         <td><?php echo $row['weekly_hosp_admissions_per_million'] ?></td>
