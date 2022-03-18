@@ -1,9 +1,8 @@
 <?php 
 include "libraries/Database.php";
-$database = new Database();
-
+$db = new Database();
 $countryCovidData = [];
-if(false/*replace false by true is you dont have the csv data uploaded to the database*/){
+if($db->checkIfTableHaveData()){
     $file_open = fopen("owid-covid-data.csv","r");
     $row = 0;
     while(($csv = fgetcsv($file_open, 160000, ",")) !== false)
@@ -78,12 +77,13 @@ if(false/*replace false by true is you dont have the csv data uploaded to the da
             $countryCovidData['excess_mortality_cumulative'] = $csv[64];
             $countryCovidData['excess_mortality'] = $csv[65];
             $countryCovidData['excess_mortality_cumulative_per_million'] = $csv[66];
-            $database->addOwidCovidData($countryCovidData);
+            $db->addOwidCovidData($countryCovidData);
             $row++;
             
         }
     }
     $row--;
+    echo "<script>CSV data uploaded to database successfully</script>";
 }
 
-$_SESSION["cases"] = $database->getTableData();
+$_SESSION["cases"] = $db->getTableData();

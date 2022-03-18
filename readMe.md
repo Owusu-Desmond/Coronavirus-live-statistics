@@ -105,6 +105,10 @@ define("DB_PASS", "Des@360");
 define("DB_NAME", "users");
 ```
 ## Note :
-To upload `owid-covid-data.csv` to your database table *owid-covid-data*  file open  `uploadData.php` file. 
+Fail run all the sql in your mysql teminal, you will get an error.
 
-On `line 6` change the *false* condition to *true* to first upload your csv file and you change it back to *false* after all the data have been loaded the your database.
+Also first time of running the project it will took about 2 munites and return an error tell you the time to upload the csv data.
+
+Run the project again and it won`t happen that way anymore because the csv data is already uploaded.
+
+

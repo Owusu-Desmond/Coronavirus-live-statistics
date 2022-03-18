@@ -135,14 +135,15 @@
             
         }
 
-        // public function checkIfTableExit($tableName){
-        //     $this->stmt = "SELECT  1 from" . "$tableName";
-        //     if ($this->dbconn->query($this->stmt) === TRUE) {
-        //         return false;
-        //     }else{
-        //         return true;   
-        //     }
-        // }
+        public function checkIfTableHaveData(){
+            $this->stmt = $this->dbconn->query("SELECT *  from owid_covid_data where iso_code = 'AFG'");
+            $this->stmt = $this->stmt->num_rows;
+            if ($this->stmt > 0) {
+                return false;
+            }else{
+                return true;   
+            }
+        }
 
         public function storeUserInfo($username,$email){
             $_SESSION['email'] = $email;

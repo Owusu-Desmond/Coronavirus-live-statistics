@@ -1,7 +1,7 @@
 <?php
     session_start();
     include_once "config/config.php";
-    include "libraries/Database.php";
+    include_once "uploadData.php";
     $db = new Database();
     $login = false;
 
