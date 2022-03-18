@@ -1,0 +1,139 @@
+<th>iso code</th>
+<th>continent</th>
+<th>location</th>
+<th>date</th>
+<th>total cases</th>
+<th>new cases</th>
+<th>new cases smoothed</th>
+<th>total deaths</th>
+<th>new deaths</th>
+<th>new deaths smoothed</th>
+<th>total cases per million</th>
+<th>new cases per million</th>
+<th>new cases smoothed per million</th>
+<th>total deaths per million</th>
+<th>new deaths per million</th>
+<th>new deaths smoothed per million</th>
+<th>reproduction rate</th>
+<th>icu patients</th>
+<th>icu patients per million</th>
+<th>hosp patients</th>
+<th>hosp patients per million</th>
+<th>weekly icu admissions</th>
+<th>weekly icu admissions per million</th>
+<th>weekly hosp admissions</th>
+<th>weekly hosp admissions per million</th>
+<th>new tests</th>
+<th>total tests</th>
+<th>total tests per thousand</th>
+<th>new tests per thousand</th>
+<th>new tests smoothed</th>
+<th>new tests smoothed per thousand</th>
+<th>positive rate</th>
+<th>tests per case</th>
+<th>tests units</th>
+<th>total vaccinations</th>
+<th>people vaccinated</th>
+<th>people fully vaccinated</th>
+<th>total boosters</th>
+<th>new vaccinations</th>
+<th>new vaccinations smoothed</th>
+<th>total vaccinations per hundred</th>
+<th>people vaccinated per hundred</th>
+<th>people fully vaccinated per hundred</th>
+<th>total boosters per hundred</th>
+<th>new vaccinations smoothed per million</th>
+<th>new people vaccinated smoothed</th>
+<th>new people vaccinated smoothed per hundred</th>
+<th>stringency index</th>
+<th>population</th>
+<th>population density</th>
+<th>median age</th>
+<th>aged 65 older</th>
+<th>aged 70 older</th>
+<th>gdp per capita</th>
+<th>extreme poverty</th>
+<th>cardiovasc death rate</th>
+<th>diabetes prevalence</th>
+<th>female smokers</th>
+<th>male smokers</th>
+<th>handwashing facilities</th>
+<th>hospital beds per thousand</th>
+<th>life expectancy</th>
+<th>human development index</th>
+<th>excess mortality cumulative absolute</th>
+<th>excess mortality cumulative</th>
+<th>excess mortality</th>
+<th>excess mortality cumulative per million</th>
+
+<tr>
+                        <td>
+                            <?php echo $row['iso_code'] ?></td>
+                            <td><?php echo $row['continent'] ?></td>
+                            <td><?php echo $row['location'] ?></td>
+                            <td><?php echo $row['date'] ?></td>
+                            <td><?php echo $row['total_cases'] ?></td>
+                            <td><?php echo $row['new_cases'] ?></td>
+                            <td><?php echo $row['new_cases_smoothed'] ?></td>
+                            <td><?php echo $row['total_deaths'] ?></td>
+                            <td><?php echo $row['new_deaths'] ?></td>
+                            <td><?php echo $row['new_deaths_smoothed'] ?></td>
+                            <td><?php echo $row['total_cases_per_million'] ?></td>
+                            <td><?php echo $row['new_cases_per_million'] ?></td>
+                            <td><?php echo $row['new_cases_smoothed_per_million'] ?></td>
+                            <td><?php echo $row['total_deaths_per_million'] ?></td>
+                            <td><?php echo $row['new_deaths_per_million'] ?></td>
+                            <td><?php echo $row['new_deaths_smoothed_per_million'] ?></td>
+                            <td><?php echo $row['reproduction_rate'] ?></td>
+                            <td><?php echo $row['icu_patients'] ?></td>
+                            <td><?php echo $row['icu_patients_per_million'] ?></td>
+                            <td><?php echo $row['hosp_patients'] ?></td>
+                            <td><?php echo $row['hosp_patients_per_million'] ?></td>
+                            <td><?php echo $row['weekly_icu_admissions'] ?></td>
+                            <td><?php echo $row['weekly_icu_admissions_per_million'] ?></td>
+                            <td><?php echo $row['weekly_hosp_admissions'] ?></td>
+                            <td><?php echo $row['weekly_hosp_admissions_per_million'] ?></td>
+                            <td><?php echo $row['new_tests'] ?></td>
+                            <td><?php echo $row['total_tests'] ?></td>
+                            <td><?php echo $row['total_tests_per_thousand'] ?></td>
+                            <td><?php echo $row['new_tests_per_thousand'] ?></td>
+                            <td><?php echo $row['new_tests_smoothed'] ?></td>
+                            <td><?php echo $row['new_tests_smoothed_per_thousand'] ?></td>
+                            <td><?php echo $row['positive_rate'] ?></td>
+                            <td><?php echo $row['tests_per_case'] ?></td>
+                            <td><?php echo $row['tests_units'] ?></td>
+                            <td><?php echo $row['total_vaccinations'] ?></td>
+                            <td><?php echo $row['people_vaccinated'] ?></td>
+                            <td><?php echo $row['people_fully_vaccinated'] ?></td>
+                            <td><?php echo $row['total_boosters'] ?></td>
+                            <td><?php echo $row['new_vaccinations'] ?></td>
+                            <td><?php echo $row['new_vaccinations_smoothed'] ?></td>
+                            <td><?php echo $row['total_vaccinations_per_hundred'] ?></td>
+                            <td><?php echo $row['people_vaccinated_per_hundred'] ?></td>
+                            <td><?php echo $row['people_fully_vaccinated_per_hundred'] ?></td>
+                            <td><?php echo $row['total_boosters_per_hundred'] ?></td>
+                            <td><?php echo $row['new_vaccinations_smoothed_per_million'] ?></td>
+                            <td><?php echo $row['new_people_vaccinated_smoothed'] ?></td>
+                            <td><?php echo $row['new_people_vaccinated_smoothed_per_hundred'] ?></td>
+                            <td><?php echo $row['stringency_index'] ?></td>
+                            <td><?php echo $row['population'] ?></td>
+                            <td><?php echo $row['population_density'] ?></td>
+                            <td><?php echo $row['median_age'] ?></td>
+                            <td><?php echo $row['aged_65_older'] ?></td>
+                            <td><?php echo $row['aged_70_older'] ?></td>
+                            <td><?php echo $row['gdp_per_capita'] ?></td>
+                            <td><?php echo $row['extreme_poverty'] ?></td>
+                            <td><?php echo $row['cardiovasc_death_rate'] ?></td>
+                            <td><?php echo $row['diabetes_prevalence'] ?></td>
+                            <td><?php echo $row['female_smokers'] ?></td>
+                            <td><?php echo $row['male_smokers'] ?></td>
+                            <td><?php echo $row['handwashing_facilities'] ?></td>
+                            <td><?php echo $row['hospital_beds_per_thousand'] ?></td>
+                            <td><?php echo $row['life_expectancy'] ?></td>
+                            <td><?php echo $row['human_development_index'] ?></td>
+                            <td><?php echo $row['excess_mortality_cumulative_absolute'] ?></td>
+                            <td><?php echo $row['excess_mortality_cumulative'] ?></td>
+                            <td><?php echo $row['excess_mortality'] ?></td>
+                            <td><?php echo $row['excess_mortality_cumulative_per_million'] ?></td>
+
+                        </tr> 

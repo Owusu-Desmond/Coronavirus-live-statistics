@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <title><?php echo $pageTitle ?></title>
+    <style>
+        *{margin:0};
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-primary">
